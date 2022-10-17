@@ -1,10 +1,15 @@
 from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
 from index import index_blueprint
+
+database = SQLAlchemy()
 
 def main():
     application = Flask(__name__)
 
     application.config.from_object("config.DevelopmentConfig")
+
+    database.init_app(application)
 
     application.register_blueprint(index_blueprint)
 
