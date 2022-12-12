@@ -1,1 +1,1 @@
-# rick-and-morty-web-app
+# app-flask-web
