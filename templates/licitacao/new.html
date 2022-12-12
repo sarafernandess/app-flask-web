@@ -18,10 +18,18 @@
             {{ form.id.label }} {{ form.id() }}
         </div>
         <div>
-            {{ form.name.label }} {{ form.name(size=20) }}
+            {{ form.title.label }} {{ form.title(size=20) }}
+        </div>
+        <div>
+            {{ form.comp.label }} {{ form.comp(size=20) }}
+        </div>
+        <div>
+            {{ form.value.label }} {{ form.value(size=20) }}
         </div>
         <input type="submit" value="Create"/>
     </form>
+
+    <a href="/licitacao/">VOLTAR</a>
 
 </body>
 </html>

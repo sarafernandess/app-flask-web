@@ -12,8 +12,8 @@ def create_app():
     from index.index import index_blueprint
     application.register_blueprint(index_blueprint)
 
-    from character.routes import character_blueprint
-    application.register_blueprint(character_blueprint)
+    from licitacao.routes import licitacao_blueprint
+    application.register_blueprint(licitacao_blueprint)
 
     db.init_app(application)
 
@@ -21,12 +21,11 @@ def create_app():
         with application.app_context():
             db.drop_all()
             db.create_all()
-            from util.crawler import get_data_from_rick_and_morty_apis
-            get_data_from_rick_and_morty_apis(db)
+
 
     return application
 
 from model import *
 
 if __name__ == "__main__":
-    create_app().run(host="0.0.0.0", port=5000)
+    create_app().run(host="0.0.0.0", port=8000)

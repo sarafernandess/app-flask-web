@@ -2,17 +2,12 @@ from main import db
 from datetime import datetime
 
 
-class Character(db.Model):
+class Licitacao(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
 
-    name = db.Column(db.String(30), nullable=False)
+    title = db.Column(db.String(30), nullable=False)
 
-    created = db.Column(db.String(15), nullable=False,
-                        default=str(datetime.utcnow()))
+    comp = db.Column(db.String(50), nullable=True)
 
-    gender = db.Column(db.String(5), nullable=True)
-
-    status = db.Column(db.String(5), nullable=True)
-
-    species = db.Column(db.String(20), nullable=True)
+    value = db.Column(db.String(50), nullable=True)

@@ -6,18 +6,24 @@
 </head>
 <body>
 
+  <a href="/licitacao/new">ADICIONAR</a>
+
   <table border="1">
     <thead>
       <tr>
         <td>ID</td>
-        <td>Nome</td>
+        <td>Título</td>
+        <td>Empresa</td>
+        <td>Valor</td>
       </tr>
     </thead>
     <tbody>
-      {% for character in characters %}
+      {% for licitacaos in licitacao %}
         <tr>
-          <td>{{ character.id }}</td>
-          <td>{{ character.name }}</td>
+          <td>{{ licitacaos.id }}</td>
+          <td>{{ licitacaos.title }}</td>
+          <td>{{ licitacaos.comp }}</td>
+          <td>{{ licitacaos.value }}</td>
         </tr>
       {% endfor %}
     </tbody>
